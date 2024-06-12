@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:t="http://schemas.android.com/apk/res/android"
+    t:layout_width="match_parent"
+    t:layout_height="match_parent"
+    t:orientation="vertical"
+    t:gravity="center_horizontal">
+
+    <TextView
+        t:layout_width="wrap_content"
+        t:layout_height="wrap_content"
+        t:text="Lets Play TicTacToe!"
+        t:textSize="25dp"
+        t:textColor="#A020F0"
+        t:fontFamily="casual"
+        t:textStyle="bold"/>
+
+    <Space
+        t:layout_width="1dp"
+        t:layout_height="50dp"/>
+
+    <LinearLayout
+        t:layout_width="wrap_content"
+        t:layout_height="wrap_content"
+        t:orientation="horizontal">
+
+        <TextView
+            t:layout_width="wrap_content"
+            t:layout_height="wrap_content"
+            t:text="WINS (X): 0"
+            t:id="@+id/text_view_xwins"
+            t:fontFamily="casual"
+            t:textStyle="bold"/>
+
+        <Space
+            t:layout_width="100dp"
+            t:layout_height="1dp"/>
+
+        <TextView
+            t:layout_width="wrap_content"
+            t:layout_height="wrap_content"
+            t:text="WINS (O): 0"
+            t:id="@+id/text_view_owins"
+            t:fontFamily="casual"
+            t:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <Space
+        t:layout_width="1dp"
+        t:layout_height="20dp"/>
+
+    <TextView
+        t:layout_width="wrap_content"
+        t:layout_height="wrap_content"
+        t:text="DRAWS: 0"
+        t:id="@+id/text_view_draws"
+        t:fontFamily="casual"
+        t:textStyle="bold"/>
+
+    <Space
+        t:layout_width="1dp"
+        t:layout_height="50dp"/>
+
+    <LinearLayout
+        t:layout_width="wrap_content"
+        t:layout_height="wrap_content"
+        t:orientation="horizontal">
+
+        <Button
+            t:layout_width="wrap_content"
+            t:layout_height="wrap_content"
+            t:text=" "
+            t:textStyle="bold"
+            t:textSize="25dp"
+            t:id="@+id/button_1"/>
+
+        <Space
+            t:layout_width="10dp"
+            t:layout_height="1dp"/>
+
+        <Button
+            t:layout_width="wrap_content"
+            t:layout_height="wrap_content"
+            t:text=" "
+            t:textStyle="bold"
+            t:textSize="25dp"
+            t:id="@+id/button_2"/>
+
+        <Space
+            t:layout_width="10dp"
+            t:layout_height="1dp"/>
+
+        <Button
+            t:layout_width="wrap_content"
+            t:layout_height="wrap_content"
+            t:text=" "
+            t:textStyle="bold"
+            t:textSize="25dp"
+            t:id="@+id/button_3"/>
+
+    </LinearLayout>
+
+    <Space
+        t:layout_width="wrap_content"
+        t:layout_height="10dp" />
+
+    <LinearLayout
+        t:layout_width="wrap_content"
+        t:layout_height="wrap_content"
+        t:orientation="horizontal">
+
+        <Button
+            t:layout_width="wrap_content"
+            t:layout_height="wrap_content"
+            t:text=" "
+            t:textStyle="bold"
+            t:textSize="25dp"
+            t:id="@+id/button_4"/>
+
+        <Space
+            t:layout_width="10dp"
+            t:layout_height="1dp"/>
+
+        <Button
+            t:layout_width="wrap_content"
+            t:layout_height="wrap_content"
+            t:text=" "
+            t:textStyle="bold"
+            t:textSize="25dp"
+            t:id="@+id/button_5"/>
+
+        <Space
+            t:layout_width="10dp"
+            t:layout_height="1dp"/>
+
+        <Button
+            t:layout_width="wrap_content"
+            t:layout_height="wrap_content"
+            t:text=" "
+            t:textStyle="bold"
+            t:textSize="25dp"
+            t:id="@+id/button_6"/>
+
+    </LinearLayout>
+
+    <Space
+        t:layout_width="wrap_content"
+        t:layout_height="10dp" />
+
+    <LinearLayout
+        t:layout_width="wrap_content"
+        t:layout_height="wrap_content"
+        t:orientation="horizontal">
+
+        <Button
+            t:layout_width="wrap_content"
+            t:layout_height="wrap_content"
+            t:text=" "
+            t:textStyle="bold"
+            t:textSize="25dp"
+            t:id="@+id/button_7"/>
+
+        <Space
+            t:layout_width="10dp"
+            t:layout_height="1dp"/>
+
+        <Button
+            t:layout_width="wrap_content"
+            t:layout_height="wrap_content"
+            t:text=" "
+            t:textStyle="bold"
+            t:textSize="25dp"
+            t:id="@+id/button_8"/>
+
+        <Space
+            t:layout_width="10dp"
+            t:layout_height="1dp"/>
+
+        <Button
+            t:layout_width="wrap_content"
+            t:layout_height="wrap_content"
+            t:text=" "
+            t:textStyle="bold"
+            t:textSize="25dp"
+            t:id="@+id/button_9"/>
+
+    </LinearLayout>
+
+    <Space
+        t:layout_width="1dp"
+        t:layout_height="50dp"/>
+
+    <TextView
+        t:layout_width="wrap_content"
+        t:layout_height="wrap_content"
+        t:text="PLAYER TURN: X"
+        t:id="@+id/text_view_currplayer"
+        t:fontFamily="casual"
+        t:textStyle="bold"/>
+
+    <Space
+        t:layout_width="1dp"
+        t:layout_height="80dp"/>
+
+    <Button
+        t:layout_width="wrap_content"
+        t:layout_height="wrap_content"
+        t:id="@+id/button_restart_game"
+        t:text="RESTART GAME"/>
+
+</LinearLayout>
