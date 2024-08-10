@@ -24,9 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private Button b9;
     private TextView currPlayer;
     private Button restartGame;
-    public static int wins_x_num = 0;
-    public static int wins_o_num = 0;
-    public static int draws_num = 0;
+    private WinCounter counter = new WinCounter(0,0,0);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +48,6 @@ public class MainActivity extends AppCompatActivity {
                 xWins.setText("WINS (X): 0");
                 oWins.setText("WINS (O): 0");
                 draws.setText("DRAWS: 0");
-                MainActivity.wins_x_num = 0;
-                MainActivity.wins_o_num = 0;
-                MainActivity.draws_num = 0;
             }
         });
     }
@@ -92,37 +87,25 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Cannot use this block", Toast.LENGTH_SHORT).show();
                     }
                 }
-                if(checkWin() == true){
+                if(checkWin()){
                     if(currPlayer.getText().toString().equals("PLAYER TURN: X")){
                         Toast.makeText(MainActivity.this, "PLAYER O HAS WON!", Toast.LENGTH_LONG).show();
-                        try {
-                            Thread.sleep(2 * 1000);
-                        } catch (InterruptedException ie) {
-                            Thread.currentThread().interrupt();
-                        }
-                        oWins.setText("WINS (O): " + (MainActivity.wins_o_num + 1));
+                        counter.oWins++;
+                        oWins.setText("WINS (O): " + (counter.oWins));
                         resetButtons();
                     } else {
                         Toast.makeText(MainActivity.this, "PLAYER X HAS WON!", Toast.LENGTH_LONG).show();
-                        try {
-                            Thread.sleep(2 * 1000);
-                        } catch (InterruptedException ie) {
-                            Thread.currentThread().interrupt();
-                        }
-                        xWins.setText("WINS (O): " + (MainActivity.wins_x_num + 1));
+                        counter.xWins++;
+                        xWins.setText("WINS (X): " + (counter.xWins));
                         resetButtons();
                         currPlayer.setText("PLAYER TURN: X");
                     }
                 }
                 Button[] blist = {b1,b2,b3,b4,b5,b6,b7,b8,b9};
-                if(checkDraw(blist) == true){
+                if(checkDraw(blist)){
                     Toast.makeText(MainActivity.this, "ITS A DRAW!", Toast.LENGTH_LONG).show();
-                    try {
-                        Thread.sleep(2 * 1000);
-                    } catch (InterruptedException ie) {
-                        Thread.currentThread().interrupt();
-                    }
-                    draws.setText("DRAWS: " + (MainActivity.draws_num)+1);
+                    counter.draws++;
+                    draws.setText("DRAWS: " + counter.draws);
                     resetButtons();
                     currPlayer.setText("PLAYER TURN: X");
                 }
